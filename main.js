@@ -130,10 +130,57 @@ switch(stroka) {
 //   alert("Ви не ввели дані.");
 // }
 
-function info() {
-    console.log("Hello, World");
-    console.log("!");
+// info();
+// можна викликати функцію кілька разів
+
+function info(word) {
+    console.log(word + "!");
 }
 
-info();
-// можна викликати функцію кілька разів
+info("Hello, World");
+
+function suma(a, b) {
+    var res = a + b;
+    // console.log("Сума чисел: " + res + ".");
+    info(res);
+}
+
+suma(10, 20);
+
+function suma_1(arr) {
+    var sum = 0;
+    for(var i = 0; i < arr.length; i++) 
+        sum += arr[i];
+    // console.log("Сума чисел: " + sum + ".");
+    return sum;
+}
+
+var array = [1, 2, 3, 4, 5];
+var array1 = [1, 2, 3, 4, 5, 6];
+var array2 = [1, 2, 3, 4, 5, 6, 7];
+
+var sum1 = suma_1(array);
+console.log("Сума чисел: " + sum1 + ".");
+//var sum2 = suma_1(array1);
+//var sum3 = suma_1(array2);
+
+//var number_1 = 10;
+function info_1() {
+    var number_1 = 10;
+    console.log(number_1);
+}
+
+info_1();
+
+var counter = 0;
+function onClickButton(element) {
+    counter++;
+    element.innerHTML = "Click me (" + counter + ")";
+    element.style.background = "red"
+}
+
+function onInput(element) {
+    if(element.value == "Hello")
+        console.log("Hello!");
+    // console.log(element.value);
+}
