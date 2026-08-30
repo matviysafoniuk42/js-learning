@@ -46,3 +46,29 @@ console.log(fruits.includes("банан")); // перевіряє чи є еле
 console.log(fruits.includes("кавун")); // перевіряє чи є елемент
 
 console.log(fruits.indexOf("банан")); // показує індекс елемента
+
+function greet(name) {
+    console.log('Hello - ', name)
+}
+
+greet('Matviy')
+
+// setTimeout(function() {
+//     greet('Matviy')
+//     // console.log('Timeout')
+// }, 1500)
+
+// виконує функцію з затримкою ^^^
+
+let counter1 = 0
+
+const interval = setInterval(function () {
+    if (counter1 == 5) {
+        clearInterval(interval)
+    }
+    else {
+        console.log(++counter1)
+    }
+}, 1000)
+
+// виконується кожні 2 секунди ^^^
